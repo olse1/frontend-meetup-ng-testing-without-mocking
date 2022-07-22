@@ -1,0 +1,38 @@
+:host {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.8em;
+  cursor: pointer;
+  display: flex;
+  height: 7em;
+  justify-content: space-between;
+  padding: 0 3em;
+  transition: border-radius 0s ease-in-out 0.55s;
+}
+
+:host:not(.collapsed) {
+  transition: border-radius 0s ease-in-out 0s;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper amh-con-tag {
+  margin-right: 3em;
+}
+
+.title {
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+button.collapse-toggle-button amh-con-icon {
+  transition: transform 0.55s ease-in-out;
+}
+
+:host:not(.collapsed) .collapse-toggle-button amh-con-icon {
+  transform: rotate(-180deg);
+}

@@ -1,0 +1,13 @@
+@import 'utils';
+
+:host {
+  display: block;
+}
+
+amh-con-project-header + amh-con-project-header {
+  margin-top: 4em;
+}
+
+.collapse-container {
+  overflow: hidden;
+}

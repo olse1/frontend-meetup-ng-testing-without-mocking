@@ -1,0 +1,13 @@
+<div class="title">{{ title }}</div>
+<div class="wrapper">
+  <amh-con-tag *ngIf="status" [theme]="'in-consultation'">{{
+    statusText
+  }}</amh-con-tag>
+  <button icon-only class="collapse-toggle-button" [attr.theme]="'control'">
+    <amh-con-icon
+      [name]="'caretDown'"
+      [theme]="'control'"
+      [size]="3.2"
+    ></amh-con-icon>
+  </button>
+</div>

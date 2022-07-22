@@ -1,0 +1,75 @@
+@import 'utils';
+
+@mixin project-content-text-ellipsis() {
+  .content {
+    flex-wrap: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .info-box {
+    overflow: hidden;
+  }
+
+  .info-box-content > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+:host {
+  border-radius: 0.8em;
+  display: flex;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  align-items: center;
+  background-color: var(--bg-colors-bg-03);
+  display: flex;
+  height: 33em;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.title-image {
+  height: fit-content;
+  object-fit: cover;
+  width: 100%;
+}
+
+.title-image-placeholder {
+  width: 18em;
+}
+
+.info-box {
+  display: flex;
+}
+
+.info-box + .info-box {
+  margin-top: 4em;
+}
+
+amh-con-icon {
+  margin: 0.1em 0.5em 0 0;
+}
+
+.content {
+  background-color: #fff;
+  flex-shrink: 0;
+  padding: 3em;
+  width: 38em;
+}
+
+.info-box-content {
+  font-size: 1.6em;
+  line-height: 1.38;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.font-bold {
+  font-weight: 600;
+}

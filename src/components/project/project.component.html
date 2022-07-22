@@ -1,0 +1,10 @@
+<amh-con-project-header
+  [title]="project | projectTitle"
+  (toggleCollapse)="toggle($event)"
+  [status]="project.status"
+  [collapsed]="collapsed"
+></amh-con-project-header>
+<div class="collapse-container" [@openClose]="collapsed ? 'collapsed' : 'open'">
+  <amh-con-project-content [project]="project"></amh-con-project-content>
+  <amh-con-units [projectId]="project.id"></amh-con-units>
+</div>

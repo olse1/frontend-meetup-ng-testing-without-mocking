@@ -1,0 +1,45 @@
+<div class="img-wrapper">
+  <img
+    *ngIf="titleImageUrl"
+    class="title-image"
+    src="{{ titleImageUrl }}"
+    alt="title"
+  />
+  <img
+    *ngIf="!titleImageUrl"
+    class="title-image-placeholder"
+    src="{{ getBaseUrl() }}assets/ui/icons/no-logo.svg"
+    alt="title"
+  />
+</div>
+<div class="content">
+  <div class="info-box">
+    <amh-con-icon
+      class="location-icon"
+      [name]="'mapMarker'"
+      [theme]="SvgIconTheme.secondary"
+      [size]="2"
+    ></amh-con-icon>
+    <div class="info-box-content">
+      <div class="project-name font-bold">{{ project.name }}</div>
+      <div class="project-street">{{ projectStreet }}</div>
+      <div class="project-postal-code">{{ projectPostalCode }}</div>
+    </div>
+  </div>
+  <div class="info-box">
+    <amh-con-icon
+      class="availability-icon"
+      [name]="'info'"
+      [theme]="SvgIconTheme.secondary"
+      [size]="2"
+    ></amh-con-icon>
+    <div class="info-box-content">
+      <div class="available-units-count">
+        {{ project.availableUnitsCount }} Wohnungen verfügbar
+      </div>
+      <div class="occupancy-ready">
+        Bezugsfertig {{ project.occupancyReady }}
+      </div>
+    </div>
+  </div>
+</div>
